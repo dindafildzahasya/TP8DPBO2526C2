@@ -1,13 +1,6 @@
 # Manajemen Akademik - TP8 MVC
 
-Aplikasi web sederhana untuk mengelola data dosen, mata kuliah, dan jadwal perkuliahan. Project ini dibuat menggunakan PHP Native dengan pendekatan Object-Oriented Programming (OOP) dan pola arsitektur Model-View-Controller (MVC), serta MySQL sebagai basis data.
-
-> **Informasi praktikum**  
-> Mata kuliah: Desain dan Pemrograman Berbasis Objek (DPBO)  
-> Modul: 9 - Model-View-Controller (MVC)  
-> Nama: `[Isi nama]`  
-> NIM: `[Isi NIM]`  
-> Kelas: `[Isi kelas]`
+Saya Adinda Fildzah Hasya dengan nim 2501218 mengerjakan TP8 dalam mata kuliah desain dan pemrograman berorientasi objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
 
 ## 1. Desain Program
 
@@ -71,8 +64,6 @@ TP8DPBO2425C..\
 ├── tp_mvc25.sql                 # Struktur database, relasi, dan data awal
 └── README.md
 ```
-
-> Sesuaikan nama folder repository dengan ketentuan kelas. Pada saat menyiapkan folder `Project`, salin isi project lokal `TP8` (folder `assets`, `controllers`, `models`, `views`, dan `index.php`) ke dalamnya. Letakkan file SQL final di root repository sesuai struktur di atas. Folder cadangan `backup_awal` tidak diperlukan untuk menjalankan aplikasi dan boleh tidak disertakan dalam folder `Project`.
 
 ### 1.4 Struktur database dan relasi
 
@@ -223,107 +214,6 @@ flowchart TD
 - **Update**: mengubah mata kuliah, hari, waktu, dan ruangan.
 - **Delete**: menghapus jadwal.
 
-## 4. Cara Menjalankan Program
 
-### 4.1 Persiapan
+## 4. Dokumentasi
 
-Pastikan perangkat sudah memiliki:
-
-- XAMPP (Apache dan MySQL).
-- PHP yang disertakan dalam XAMPP.
-- Browser.
-
-### 4.2 Menyiapkan project
-
-1. Salin folder `Project` ke direktori `C:\xampp\htdocs\`.
-2. Untuk mengikuti alamat contoh di bawah, nama folder aplikasi di dalam `htdocs` adalah `TP8`.
-3. Jalankan Apache dan MySQL melalui XAMPP Control Panel.
-
-### 4.3 Membuat database
-
-1. Buka `http://localhost/phpmyadmin`.
-2. Pilih menu **Import**.
-3. Pilih file `tp_mvc25.sql` dari repository.
-4. Jalankan proses import.
-5. Pastikan database `tp_mvc25` beserta tabel `lecturers`, `courses`, dan `schedules` berhasil dibuat.
-
-File SQL berisi definisi tabel, relasi foreign key, serta data awal. Impor file tersebut pada database yang belum berisi tabel/data project agar data awal tidak terduplikasi.
-
-### 4.4 Memeriksa konfigurasi koneksi
-
-Periksa konfigurasi pada `Project/models/Database.php`. Sesuaikan host, username, password, dan nama database dengan konfigurasi MySQL lokal.
-
-Konfigurasi default project:
-
-```php
-private $host = "localhost";
-private $username = "root";
-private $password = "";
-private $database = "tp_mvc25";
-```
-
-### 4.5 Membuka aplikasi
-
-Jika folder aplikasi di `htdocs` bernama `TP8`, buka alamat berikut pada browser:
-
-```text
-http://localhost/TP8/
-```
-
-Gunakan menu **Dosen**, **Mata Kuliah**, dan **Jadwal** untuk mengakses fitur aplikasi.
-
-## 5. Dokumentasi
-
-Sesuai ketentuan praktikum, folder `Dokumentasi` digunakan untuk menyimpan screenshot dan screen recording hasil aplikasi. **Tambahkan file dokumentasi yang benar-benar direkam atau diambil dari aplikasi.**
-
-Dokumentasi yang disarankan:
-
-| Dokumentasi | Bukti yang dimasukkan |
-|---|---|
-| Halaman Dosen | Tampilan daftar dosen dan data yang tampil. |
-| CRUD Dosen | Bukti tambah, edit, dan hapus dosen. |
-| Halaman Mata Kuliah | Tampilan daftar mata kuliah beserta dosen pengampu. |
-| CRUD Mata Kuliah | Bukti tambah, edit, dan hapus mata kuliah. |
-| Halaman Jadwal | Tampilan daftar jadwal beserta mata kuliah dan dosen. |
-| CRUD Jadwal | Bukti tambah, edit, dan hapus jadwal. |
-| Screen recording | Rekaman alur penggunaan aplikasi dan demonstrasi CRUD. |
-
-Contoh susunan folder dokumentasi (sesuaikan nama file dengan dokumentasi yang dibuat):
-
-```text
-Dokumentasi/
-├── halaman-dosen.png
-├── crud-dosen.png
-├── halaman-mata-kuliah.png
-├── crud-mata-kuliah.png
-├── halaman-jadwal.png
-├── crud-jadwal.png
-└── demo-aplikasi.mp4
-```
-
-Setelah file dokumentasi tersedia, tautkan atau tampilkan di bawah ini. Ganti nama file sesuai file yang benar-benar ada di folder `Dokumentasi`.
-
-<!-- Contoh untuk menampilkan screenshot:
-![Halaman Dosen](Dokumentasi/halaman-dosen.png)
-![Halaman Mata Kuliah](Dokumentasi/halaman-mata-kuliah.png)
-![Halaman Jadwal](Dokumentasi/halaman-jadwal.png)
--->
-
-**Screen recording:**
-
-<!-- Ganti nama file sesuai video yang benar-benar dimasukkan:
-[Lihat screen recording demonstrasi aplikasi](Dokumentasi/demo-aplikasi.mp4)
--->
-
-## 6. Catatan Pengembangan
-
-- Nama database yang digunakan adalah `tp_mvc25`.
-- Nama tabel database adalah `lecturers`, `courses`, dan `schedules`.
-- Model `CourseSchedule.php` mengelola tabel database `schedules`.
-- Relasi dosen dan mata kuliah menggunakan foreign key `courses.lecturer_id`.
-- Relasi mata kuliah dan jadwal menggunakan foreign key `schedules.course_id`.
-- Operasi pengelolaan data dengan parameter menggunakan prepared statements.
-
-## 7. Penutup
-
-Project ini merupakan penerapan arsitektur Model-View-Controller (MVC) pada PHP Native. Pemisahan Model, View, dan Controller membuat tanggung jawab pengelolaan data, tampilan, dan alur aplikasi menjadi lebih terstruktur. Aplikasi dikembangkan dari program awal pengelolaan dosen dengan menambahkan pengelolaan mata kuliah dan jadwal perkuliahan yang saling berelasi.
